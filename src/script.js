@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded",function(){
         const convertedValue = currentValue
             .replace("×","*")
             .replace("÷","/")
-            .replace("%","*0.01");
+            .replace("%","*0.01")
+            .replace('sin','Math.sin')
+            replace('cos','Math.cos');
+
+
         console.log('convertedValue:',convertedValue)
         const result = eval(convertedValue);
         currentValue = result.toString();
